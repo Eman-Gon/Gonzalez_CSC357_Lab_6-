@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#define PORT 32454  // Choose a different port number between 1024 and 65535
+#define PORT 32454 
 
 void handle_request(int nfd)
 {
@@ -24,7 +24,6 @@ void handle_request(int nfd)
 
     while ((num = getline(&line, &size, network)) >= 0)
     {
-        // Send the received data back to the client
         write(nfd, line, num);
     }
 

@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#define PORT 32454  // Choose a different port number between 1024 and 65535
+#define PORT 32454 
 
 #define MIN_ARGS 2
 #define MAX_ARGS 2
@@ -38,7 +38,6 @@ void send_request(int fd)
     {
         write(fd, line, num);
 
-        // Read the response from the server
         char response[1024];
         ssize_t bytes_read = read(fd, response, sizeof(response) - 1);
         if (bytes_read > 0)
