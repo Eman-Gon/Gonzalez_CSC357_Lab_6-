@@ -43,7 +43,7 @@ void send_request(int fd)
         if (bytes_read > 0)
         {
             response[bytes_read] = '\0';
-            printf("Server echoed: %s", response);
+            printf(response);
         }
     }
 
