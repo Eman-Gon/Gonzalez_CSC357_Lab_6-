@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-
+#include <sys/types.h>
 int main() {
     int p1[2], p2[2], p3[2];
     int v;
